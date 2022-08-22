@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const determNum = () => {
+            userInput = prompt('Write any number')
+            if(userInput < 0){
+                alert ('you entered negative number')
+            } else if(userInput > 0){
+                alert ('you entered possitive number')
+            } else if(userInput == 0){
+                alert ('you entered 0')
+            } else if(userInput === null){
+                alert ('canceled')
+            } else {
+                alert('Your input is not a number')
+            }
+        }
+        determNum();
+        
+    
+    </script>
+</body>
+</html>

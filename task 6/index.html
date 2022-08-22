@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let southData = [0, 0, 0, 0, 0, 0, 0];
+            let westData = [0, 0, 0, 0, 0, 0, 0];
+            let eastData = [0, 0, 0, 0, 0, 0, 0];
+            let northData = [0, 0, 0, 0, 0, 0, 0];
+        const createData = (data) => {
+            let metaData;
+            for(let i = 0; i < 7; i++){
+                metaData = Math.floor(Math.random() * (25 - 13 + 1) + 13)
+                data[i] += metaData; 
+            }
+            
+            return(data)
+        }
+        console.log(createData(southData));
+        console.log(createData(westData));
+        console.log(createData(eastData));
+        console.log(createData(northData));
+
+        const conbinetArr = (south, west, east, north) => {
+            const mainArr = [];
+            let sumForAllData = 0;
+            let result;
+            mainArr.push(...south, ...west, ...east, ...north)
+            for(let i = 0; i < mainArr.length; i++){
+                sumForAllData += mainArr[i]
+            }
+            result = sumForAllData/mainArr.length
+            return(result)
+        }
+
+        console.log(conbinetArr(southData, westData, eastData, northData))
+        
+        
+
+    </script>
+</body>
+</html>
